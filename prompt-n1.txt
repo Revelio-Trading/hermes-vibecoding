@@ -1,0 +1,33 @@
+SETUP
+Save this as a reusable procedure for my trading strategy work. Use one main agent and keep each strategy’s rules, code and results in its own folder. Then start at step 1 without waiting for me to say “continue”.
+
+1. HOW SHOULD YOU WORK WITH ME?
+Ask me to choose one of three options, with a brief and simple explanation for each. The level determines how much technical detail you ask me during the process:
+- Beginner: Handle the technical work and routine problems yourself. Explain results simply. Ask me only for missing information, or for decisions that would change my strategy or what the test can tell us.
+- Intermediate: Show me the approach and relevant code. Recommend technical solutions and ask me before major implementation choices. Handle routine fixes yourself.
+- Advanced: Give me the code, settings, logs and detailed checks. Let me approve the technical approach and significant changes, then carry out the agreed work without repeated approvals.
+
+2. GET THE DATA READY FIRST
+Ask the asset, timeframe and dates for the strategy, so you can check right away whether suitable data is already in the workspace. If it isn't, ask me first: do I have a file, do I know a website or data provider to download from (for example Dukascopy), or do I have no idea? If I name a source, figure out by yourself how to download from it. If I have no idea, suggest one or two known sources for that market and let me choose. Then download whatever is missing and check the full requested history before anything else happens. If the data can't be accessed or doesn't pass the checks, stop here and tell me what to provide, so nobody wastes time explaining a strategy that can't be tested. Only once the data is usable does the interview start. Reuse valid existing data and download only what is missing or needs repair, and never invent prices. This step is per market, not per strategy: the next strategy on the same market finds the checked file in the workspace and goes straight to the interview.
+
+3. THE INTERVIEW
+Ask all the relevant questions to understand the strategy, including position sizing, in small rounds of 3 questions each, remembering the answers and never asking what you already know. Also ask if I want to keep the last part of the period sealed for a fair test and, if so, recommend the split. If a split is chosen, everything from here until the final test uses the training period only.
+
+4. CONFIRM THE RULES WITH REAL EXAMPLES
+Give a recap of how the strategy works and ask me to confirm. Also take two or three examples from real charts (from the training period if there's a split), showing entry, stop, target and the amount risked, and confirm with me that that's the intended behavior of the strategy.
+
+5. RUN THE TEST
+Once the strategy is confirmed, the test runs. Check indicator calculations using a separate method, replay every trade, and confirm that the trade records and report agree. Handle routine corrections yourself and summarize the checks in one line. If you cannot resolve a discrepancy, clearly explain in a simple way what remains unverified instead of presenting the result as checked. While anything long is running, post a one-line progress update every 15 minutes.
+
+6. THE REPORT
+Give a clear report, explaining everything in a simple way: the result, why the strategy won or lost, "Choices I made for you", "What I couldn't verify", and how much time and usage each stage took, with estimated costs kept separate from actual charges. Also return a downloadable backtest report, a sort of trading journal, with intuitive metrics and visuals that make it clear what worked and what didn't. Make it clear where to find these files.
+
+7. IMPROVEMENTS
+Don't start optimizing on your own. Ask: "Do you want me to test improvements? I'd try these three changes." Then give a clear report that I can understand easily, explaining what would have helped in the past, without presenting it as a promise about future trading.
+
+8. FINAL TEST
+If I chose the split, the optimization runs only on the training period. The chosen change is then tested once on the sealed period. Don’t retune on the sealed period on your own. Provide the same downloadable report and clear explanations for the training period, the test period and the overall period, kept separate. If I ask to keep improving the strategy after that, do it, but warn me that optimizing after testing on the sealed period may lead to overfitting.
+
+STANDING RULES
+Every stage saves its results as files the next stage reads; never retype numbers from a report or hard-code them.
+This is historical research only: never connect a broker or place trades.
